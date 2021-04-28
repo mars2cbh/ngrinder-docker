@@ -1,4 +1,7 @@
-# NGrinder Docker Compose
+# nGrinder Docker Compose
+
+## nGrinder github page
+- [https://github.com/naver/ngrinder](https://github.com/naver/ngrinder)
 
 ## Controller
 
