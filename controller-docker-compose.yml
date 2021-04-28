@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  controller:
+    container_name: ngrinder-controller
+    image: ngrinder/controller:latest
+    environment:
+      - TZ=Asia/Seoul
+    ports:
+      - "8880:80"
+      - "16001:16001"
+      - "12000-12009:12000-12009"
+    volumes:
+      - /home/ubuntu/data/ngrinder-controller:/opt/ngrinder-controller
+    sysctls:
+      - net.core.somaxconn=65000
