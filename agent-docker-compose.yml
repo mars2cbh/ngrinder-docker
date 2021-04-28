@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  agent:
+    container_name: ngrinder-agent
+    image: ngrinder/agent:latest
+    command: ["__CONTROLLER_IP__:8880"]
+    environment:
+      - TZ=Asia/Seoul
+    sysctls:
+      - net.core.somaxconn=65000
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nproc:
+        soft: 1024000
+        hard: 1024000
+      nofile:
+        soft: 1024000
+        hard: 1024000
